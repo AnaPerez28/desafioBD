@@ -1,0 +1,90 @@
+public class Ejercicios {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println();
+		Fibo(10);
+		System.out.println();
+		System.out.println();
+		List(20);
+		System.out.println();
+		System.out.println();
+		Square(10);
+		
+	}
+	
+	
+	private static void Square(int i) {		
+		
+		for (int f = 1 ; f<=i;f++) {
+			
+			for (int c = 1 ; c<=i;c++) {
+				if (c>1 && c<i && f>1 && f<i) {					
+						if(c==f) {
+							System.out.print("X ");
+						}else
+						{
+							//i-c == f-1
+							if (f-1+c==i ) {
+								System.out.print("X ");
+							
+							}else {
+							
+							System.out.print("  ");}
+						
+					}
+					
+				}else {
+					System.out.print("X ");
+				}
+			}
+			System.out.println();
+		}
+		
+	}
+
+	private static void List(int n) {
+		
+		for(int i = 1; i<n ; i++) {
+			
+					if (i % 5 == 0 && i % 3 == 0) {
+						System.out.println("BestDay");
+					}else {
+							if (i % 5 == 0) {
+								System.out.println("Day");
+							}else {
+								if (i % 3 == 0) {
+									System.out.println("Best");				
+								}
+								else {
+						System.out.println(i);
+								}
+							}
+					}
+		}
+		
+	}
+	
+	private static void Fibo(int n) {
+		//0 , 1 , 1 , 2 , 3 , 5 , 8 , 13 , 21 , 34 , 55
+		
+		int actual,ant1,ant2;
+		ant1 = ant2 = 1;
+		
+		for (int i=0; i<=n;i++) {
+			if(i==0 || i==1) {
+				System.out.println(1);
+			}else {
+				for (i=2; i<=n; i++) {
+					
+					 actual = ant1 + ant2;
+					 System.out.println(actual);
+					 ant2 = ant1;
+					 ant1 = actual;
+				} 
+			}
+		}
+	}
+
+}
