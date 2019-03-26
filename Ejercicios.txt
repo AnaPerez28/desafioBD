@@ -1,0 +1,98 @@
+### Prueba del cuadro
+
+
+public class PruebaCuatro {
+	 
+	
+	public static void main(String[] args) {
+	
+		
+		for(int f=1; f<=11; f++) {
+			
+			for(int i=1; i<=11; i++) {
+				
+				if(f>1 && f<11 && i>1 && i<11) {
+					if(f==i) {
+						System.out.print("x ");
+					
+					}
+					else {
+						if(f-1 + i == 11) {
+							System.out.print("x ");
+						}
+						else {
+								
+						System.out.print("  ");
+						}
+					}
+					
+				}
+				else {
+					
+					System.out.print("x ");
+				}
+			}
+			System.out.println();
+		}
+		
+	}
+	
+	
+}
+
+
+###Prueba Bestday
+
+
+public class Prueba {
+
+	public static void main(String[] args) {
+		
+		
+		for(int f=1; f<=50; f++){
+			
+			if (f%3 == 0 && f%5 == 0) {
+				System.out.println("BestDay");
+			}		else {
+				if(f%3 == 0) {
+					System.out.println("Best");
+				}
+				else {
+					if(f%5 == 0) {
+						System.out.println("Day");
+					}
+					else {
+						System.out.println(f);
+					}
+				}
+			}
+		}
+
+	}
+
+}
+
+
+##Switcheo
+
+
+public class PruebaDos {
+
+	public static void main(String[] args) {
+		
+		int suma=1;
+		int resultado=0;
+		int c=0;
+		
+		for(int f=0; f<10; f++) {
+			
+			c=resultado + suma;
+			resultado=suma;
+			suma=c;
+		
+			System.out.println(c);
+		}		
+	
+	}
+
+}
